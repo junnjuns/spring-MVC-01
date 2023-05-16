@@ -12,6 +12,8 @@ public class OldController implements Controller {
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("OldController.handleRequest");
 
-        return null;
+        //스프링부트가 InternalResourceViewResolver 라는 뷰 리졸버를 자동으로 등록하는데
+        // application.properties에 등록한 prefix, suffix 설정정보를 사용해서 등록한다.
+        return new ModelAndView("new-form");
     }
 }
